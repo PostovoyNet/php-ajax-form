@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PHP + AJAX скрипт отправки форм на E-mail</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <script src="feedback/js/jquery.arcticmodal.js"></script>
+    <script src="feedback/js/jquery.jgrowl.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '.modal_btn', function(){
+			$('#small-modal').arcticmodal();
+		});
+	});
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.arcticmodal.css">
+    <link rel="stylesheet" type="text/css" href="feedback/css/jquery.jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div id="logo">
+                <a class="logo" href="http://postovoy.net/"><img src="http://postovoy.net/templates/skin/developer-kit2/images/logo.jpg" alt="Постовой - онлайн журнал"></a>
+            </div>
+            <div id="description" class="width_block screen">
+            	<br>
+                <h1>PHP + AJAX скрипт отправки форм на E-mail</h1>
+                <br>
+               	<br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="span3">
+        	<span class="btn btn-block btn-large btn-success modal_btn">Форма в модальном окне</span>
+            <a class="btn btn-block btn-large btn-inverse" href="http://postovoy.net/22.html">Документация</a>
+            <br>
+            <br>
+            <p align="center"><small>Скрипт разработан студией веб-дизайна и программирования <a href="http://artuelle.com/" target="_blank">Artuelle</a></small></p>
+        </div>
+    	<div class="span4 offset1">
+        	<div class="well">
+                <legend>Пример формы 2</legend>
+                <form action="" method="get" name="form-2">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="input-medium focused" name="name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-book"></i></span>
+                        <input class="input-medium focused" name="tell" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-envelope"></i></span>
+                        <input class="input-medium focused" name="e-mail" type="text" placeholder="Ваш E-mail">
+                    </div>
+                    <textarea class="input-lage focused" name="text" placeholder="Ваше сообщение"></textarea>
+                    <label class="checkbox">
+                        <input type="checkbox" value="да" name="checkbox"> Checkbox
+                    </label>
+                    <input class="feedback btn btn-block btn-large btn-success" name="send" type="button" value="Тест формы !">
+                </form>
+            </div>
+        </div>
+    	<div class="span4">
+        	<div class="well">
+                <legend>Пример формы 3</legend>
+                <form action="" method="get" name="form-3">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="input-medium focused" name="name" type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-book"></i></span>
+                        <input class="input-medium focused" name="tell" type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-envelope"></i></span>
+                        <input class="input-medium focused" name="e-mail" type="text" placeholder="Ваш E-mail">
+                    </div>
+                    <textarea class="input-lage focused" name="text" placeholder="Ваше сообщение"></textarea>
+                    <label class="checkbox">
+                        <input type="checkbox" value="да" name="checkbox"> Checkbox
+                    </label>
+                    <label class="radio">
+                        <input type="radio" value="1 да" name="radio"> Radio 1
+                    </label>
+                    <label class="radio">
+                        <input type="radio" value="2 да" name="radio"> Radio 2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" value="3 да" name="radio"> Radio 3
+                    </label>
+                    <select class="span2" name="select">
+                    	<option value="">Сделайте выбор</option>
+                        <option value="select-1">1</option>
+                        <option value="select-2">2</option>
+                        <option value="select-3">3</option>
+                        <option value="select-4">4</option>
+                        <option value="select-5">5</option>
+                    </select>
+                    
+                    <input class="feedback btn btn-block btn-large btn-success" name="send" type="button" value="Тест формы !">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+<!-- Формы в модальных окнах -->
+    <div class="box-modal" id="small-modal">
+        <div class="modal-close arcticmodal-close">x</div>
+        <div class="modal-content-box">
+            <legend>Пример формы 1</legend>
+            <form action="" method="get" name="form-1">
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-user"></i></span>
+                    <input class="input-medium focused" name="name" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="input-prepend">
+                    <span class="add-on"><i class="icon-book"></i></span>
+                    <input class="input-medium focused" name="tell" type="text" placeholder="Ваш телефон">
+                </div>
+                <input class="feedback btn btn-block btn-success" name="send" type="button" value="Тест формы !">
+            </form>
+        </div>
+    </div>
+<!-- // Формы в модальных окнах -->
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
